@@ -15,12 +15,12 @@ public class Game extends Canvas implements Runnable{
 	    super();
 	}
 
-	private Menu menu; 
+//	private Menu menu; 
 	
 	public static final long serialVersionUID = 1L;
 	public static final int WIDTH = 1200;
 	public static final int HEIGTH = 720;
-	public final String TITLE = "letsGetA";
+	public final String TITLE = "KIKI'S WAY HOME";
 	
 	private boolean running = false;
 	private Thread thread;
@@ -28,7 +28,6 @@ public class Game extends Canvas implements Runnable{
 	private BufferedImage image = new BufferedImage(WIDTH,HEIGTH,BufferedImage.TYPE_INT_RGB);
 	private BufferedImage Kiki = null;
 	private BufferedImage carObj = null;
-	private BufferedImage pJaiD = null;
 	private BufferedImage background = null;
 	private BufferedImage win = null;
 	
@@ -51,7 +50,7 @@ public class Game extends Canvas implements Runnable{
 		
 		c = new Controller(this);
 		p = new Player(570, 620,this);
-		menu = new Menu();
+//		menu = new Menu();
 		
 	}
 	
@@ -84,8 +83,6 @@ public class Game extends Canvas implements Runnable{
 		final double amoutOfTicks = 60.0;
 		double ns = 1000000000/amoutOfTicks;
 		double delta = 0;
-		int updates = 0;
-		int frames = 0;
 		long timer = System.currentTimeMillis();
 		
 		while(running) {
@@ -94,16 +91,11 @@ public class Game extends Canvas implements Runnable{
 			lastTime = now;
 			if(delta >= 1) {
 				tick();
-				updates++;
 				delta--;
 			}
 			render();
-			frames++;
-			
 			if(System.currentTimeMillis()-timer>1000) {
 				timer += 1000;
-				updates = 0;
-				frames = 0;
 			}
 		}
 		stop();

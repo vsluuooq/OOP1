@@ -1,12 +1,11 @@
 package Main;
 
 import java.awt.Graphics;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import javax.imageio.ImageIO;
+//import javax.imageio.ImageIO;
 
 public class Controller {
     private List<Car> cars = new ArrayList<>();

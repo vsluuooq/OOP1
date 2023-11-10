@@ -5,7 +5,6 @@ import java.awt.image.*;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import javax.swing.JLabel;
 
 
 public class Player {
@@ -16,13 +15,10 @@ public class Player {
 	private double velY = 0;
 	
 	private Game game;
-	private Controller con;
 
 	
 	private BufferedImage player;
-	private BufferedImage win;
-	
-	private int collisionCount = 0;
+//	private BufferedImage win;
 	
 	public Player(Game game) {
         this.game = game;
